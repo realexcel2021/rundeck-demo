@@ -62,15 +62,9 @@ services:
           - 4440:4440
         volumes:
           - rundeck-data:/home/rundeck/server/data
-    postgres:
-        image: postgres
-        expose:
-          - 5432
-        environment:
-          - POSTGRES_DB=rundeck
-          - POSTGRES_USER=rundeck
-          - POSTGRES_PASSWORD=rundeck
 
+volumes:
+    rundeck-data:
 
 COMPOSE
 
